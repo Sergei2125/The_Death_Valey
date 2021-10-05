@@ -1,0 +1,137 @@
+header {
+  background-color: #eff0f2;
+}
+.header {
+  height: 100vh;
+  padding: 64px 0 195px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  &__title {
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 55px;
+    color: #505050;
+    text-shadow: 0px 9px 10px #0000003d;
+  }
+
+  &__title h2 {
+    letter-spacing: 1.9px;
+    padding-bottom: 13px;
+    padding-left: 13px;
+    display: inline-block;
+  }
+  &__title h1 {
+    letter-spacing: 2px;
+    padding-left: 4px;
+  }
+  &__title--blue {
+    background-color: #b2f2ee;
+    padding: 0 8px;
+    text-shadow: 5px 5px 3px #97cecb;
+    line-height: 0.622;
+    letter-spacing: 1.9px;
+    margin-left: -7px;
+  }
+  &__title--blue:last-child {
+    margin-right: -8px;
+  }
+  &__contact {
+    position: relative;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid hsl(210, 1%, 47%);
+    padding: 11px 43px 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000bf;
+    line-height: 1.556;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-weight: bold;
+  }
+
+  &__link:hover {
+    opacity: 0.5;
+    transition: 0.4s;
+  }
+}
+
+.logo {
+  text-align: left;
+  display: inline-block;
+
+  &:hover {
+    transform: translate(3px, 3px);
+    transition: 0.5s;
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    font-family: "Montserrat";
+    border: 5.5px solid #170f1c;
+    padding: 8.5px 7px 6px 8px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 2px rgba(21, 21, 22, 0.75);
+    letter-spacing: 0.8px;
+    box-shadow: inset 0px 0px 2px #170f1c;
+  }
+
+  &__text--blue {
+    font-size: 20px;
+    color: #77efe5;
+    text-shadow: 0px 0px 2px #151516bf;
+  }
+}
+
+.glass {
+  position: absolute;
+  top: 18px;
+  right: 88px;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .header__title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .header__title {
+    font-size: 30px;
+  }
+  .header__title h2 {
+    padding-left: 0px;
+  }
+
+  .logo {
+    text-align: center;
+  }
+  .glass {
+    right: calc(50% - 45px);
+    top: 90px;
+  }
+}
+@media (max-width: 425px) {
+  .header__title {
+    font-size: 20px;
+  }
+  .header__title h1 {
+    line-height: 2.2;
+  }
+}
+@media (max-width: 320px) {
+  .header__title h1 {
+    padding-top: 8px;
+    line-height: 1.8;
+  }
+}

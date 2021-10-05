@@ -1,0 +1,206 @@
+footer {
+  background: url(../images/christmas_snow_trees-wide.png) no-repeat;
+  position: relative;
+  background-position: bottom center;
+  z-index: 0;
+}
+.contacts {
+  &::before {
+    background: url(../images/footer.png) no-repeat;
+    content: "";
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__info {
+    padding: 112px 0 122px;
+    display: flex;
+    justify-content: space-between;
+    color: #c7cccf;
+    align-items: stretch;
+  }
+}
+
+.form {
+  padding: 0px 33px 35px 30px;
+  background-color: #021623b3;
+  z-index: 2;
+  margin-right: 26px;
+  width: 613px;
+
+  &__input,
+  &__subject,
+  &__email,
+  &__message {
+    display: block;
+    font-family: "Raleway";
+    color: #ffffffb3;
+    background-color: #02162300;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #ffffff4d;
+    line-height: 3.2;
+    width: 100%;
+  }
+
+  &__input {
+    margin: 27px 0 0px;
+    padding: 0 4px;
+  }
+  &__subject {
+    margin: 11px 0 0px;
+    padding: 0 4px;
+  }
+  &__email {
+    margin: 10px 0 0px;
+    padding: 0 4px;
+  }
+  &__message {
+    margin: 13px 0 0px;
+    padding: 0 4px 26px;
+  }
+  &__submit {
+    display: inline-block;
+    padding: 14px 35px 13px 35px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+    outline: none;
+    border: none;
+    background-color: #6eeee4;
+    border-radius: 4px;
+    margin: 36px 0 2px;
+    line-height: 1.556;
+    letter-spacing: 2.6px;
+  }
+
+  &__submit:hover {
+    opacity: 0.7;
+    transition: 0.4s;
+  }
+}
+
+.form__input::-webkit-input-placeholder,
+.form__subject::-webkit-input-placeholder,
+.form__email::-webkit-input-placeholder,
+.form__message::-webkit-input-placeholder {
+  color: #ffffff9a;
+}
+
+.form__input:hover,
+.form__subject:hover,
+.form__email:hover,
+.form__message:hover {
+  background-color: #02162366;
+  transition: 0.3s;
+}
+
+.address {
+  padding: 29px 22px 11px;
+  background-color: #021623b3;
+  box-shadow: 0px 0px 3px 0px #15151529;
+  z-index: 2;
+  color: #ffffff9a;
+  width: 500px;
+  font-family: "Raleway";
+  font-size: 15px;
+  line-height: 1.6;
+
+  &__text {
+    padding-left: 7px;
+  }
+  &__web {
+    padding-top: 24px;
+    padding-left: 7px;
+  }
+  &__email {
+    padding-left: 7px;
+    margin-bottom: 20px;
+  }
+}
+.map {
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    color: #eee;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+  }
+}
+
+.social {
+  padding: 75px 3px 147px 0;
+  background-color: #252a2d;
+  text-align: center;
+  z-index: 2;
+
+  &__text {
+    padding: 17px 16px 13px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    color: #bec0c1;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    background-color: #424648;
+    display: inline-block;
+    height: 40px;
+    width: 45px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__link:hover {
+    background-color: #6eeee4;
+    transition: 0.3s;
+  }
+  &__link:hover .social__img {
+    display: none;
+  }
+  &__imgHover {
+    display: none;
+  }
+  &__link:hover .social__imgHover {
+    display: inline-block;
+    height: 21px;
+  }
+  &__img {
+    height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts__info {
+    padding: 50px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form {
+    margin: 0 0 50px;
+  }
+}
+@media (max-width: 425px) {
+  .social {
+    padding: 60px 0;
+  }
+  .form {
+    width: 100%;
+
+    &__submit {
+      padding: 14px;
+    }
+  }
+  .address {
+    width: 100%;
+  }
+}

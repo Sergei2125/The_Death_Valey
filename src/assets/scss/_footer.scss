@@ -178,29 +178,39 @@ footer {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .contacts__info {
     padding: 50px 0;
     flex-wrap: wrap;
     justify-content: center;
   }
-
+  .address {
+    width: 613px;
+  }
   .form {
     margin: 0 0 50px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 767px) {
+}
+@media (max-width: 500px) {
   .social {
-    padding: 60px 0;
-  }
-  .form {
-    width: 100%;
-
-    &__submit {
-      padding: 14px;
-    }
+    padding: 50px 0;
   }
   .address {
     width: 100%;
+  }
+  .form {
+    text-align: center;
+    &__submit {
+      margin: 20px 0 0;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .form {
+    &__submit {
+      padding: 14px;
+    }
   }
 }

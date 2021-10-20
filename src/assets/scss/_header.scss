@@ -3,41 +3,40 @@ header {
 }
 .header {
   height: 100vh;
-  padding: 64px 0 195px;
-  display: flex;
+  padding: 6.4rem 0 19.5rem;
+  @include displFlexSpaceBetw;
   flex-direction: column;
-  justify-content: space-between;
   text-align: center;
 
   &__title {
-    font-size: 45px;
+    font-size: 4.5rem;
     font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 55px;
+    margin-top: 5.5rem;
     color: #505050;
     text-shadow: 0px 9px 10px #0000003d;
+    @include uppercase;
   }
 
   &__title h2 {
     letter-spacing: 1.9px;
-    padding-bottom: 13px;
-    padding-left: 13px;
+    padding-bottom: 1.3rem;
+    padding-left: 1.3rem;
     display: inline-block;
   }
   &__title h1 {
     letter-spacing: 2px;
-    padding-left: 4px;
+    padding-left: 0.4rem;
   }
   &__title--backBlue {
-    background-color: #b2f2ee;
-    padding: 0 8px;
-    text-shadow: 5px 5px 3px #97cecb;
+    background-color: $bluelight;
+    padding: 0 0.8rem;
+    text-shadow: 5px 5px 3px $bluedark;
     line-height: 0.622;
     letter-spacing: 1.9px;
-    margin-left: -7px;
+    margin-left: -0.7rem;
   }
   &__title--backBlue:last-child {
-    margin-right: -8px;
+    margin-right: -0.8rem;
   }
   &__contact {
     position: relative;
@@ -46,15 +45,15 @@ header {
   &__link {
     display: inline-block;
     text-decoration: none;
-    border: 2px solid hsl(210, 1%, 47%);
-    padding: 11px 43px 10px;
-    font-size: 18px;
-    text-transform: uppercase;
+    border: 2px solid #777879;
+    padding: 1.1rem 4.3rem 1rem;
+    font-size: 1.8rem;
     color: #000000bf;
     line-height: 1.556;
     letter-spacing: 2px;
     font-weight: 700;
     font-weight: bold;
+    @include uppercase;
   }
 
   &__link:hover {
@@ -63,8 +62,8 @@ header {
   }
   &__glass {
     position: absolute;
-    top: 18px;
-    right: 88px;
+    top: 1.8rem;
+    right: 8.8rem;
     z-index: 1;
   }
 }
@@ -80,75 +79,75 @@ header {
 
   &__text {
     display: inline-block;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 700;
-    color: #000;
+    color: $black;
     font-family: "Montserrat";
-    border: 5.5px solid #170f1c;
-    padding: 8.5px 7px 6px 8px;
-    text-transform: uppercase;
+    border: 5.5px solid $black;
+    padding: 0.85rem 0.7rem 0.6rem 0.8rem;
     text-shadow: 0px 0px 2px rgba(21, 21, 22, 0.75);
     letter-spacing: 0.8px;
     box-shadow: inset 0px 0px 2px #170f1c;
+    @include uppercase;
   }
 
   &__letter {
-    font-size: 20px;
-    color: #77efe5;
+    font-size: $fontSize-l;
+    color: $blue;
   }
 }
 
-@media (max-width: 1169px) {
+@include screen-xxl {
   .header__title {
-    font-size: 40px;
+    font-size: $fontSize-xxl;
   }
 }
-@media (max-width: 1023px) {
+@include screen-xl {
   .header__title {
-    font-size: 35px;
+    font-size: 3.5rem;
   }
   .header__title h1 {
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
-@media (max-width: 899px) {
+@include screen-l {
   .header__title h1 {
     line-height: 1.8;
   }
 }
-@media (max-width: 767px) {
+@include screen-m {
   .header__title {
-    font-size: 30px;
+    font-size: $fontSize-xl;
   }
   .header__title h2 {
-    padding-left: 0px;
+    padding-left: 0;
   }
   .header__title h1 {
     line-height: 2;
   }
   .header__glass {
     right: calc(50% - 45px);
-    top: 90px;
+    top: 9rem;
   }
   .logo {
     text-align: center;
   }
 }
-@media (max-width: 500px) {
+@include screen-s {
   .header {
-    padding: 30px 0 155px;
+    padding: 3rem 0 15rem;
 
     &__title h1 {
-      padding-top: 0px;
+      padding-top: 0;
     }
     &__title {
-      font-size: 25px;
+      font-size: 2.5rem;
     }
   }
 }
-@media (max-width: 425px) {
+@include screen-xs {
   .header__title {
-    font-size: 19px;
+    font-size: 1.9rem;
   }
   .header__title h1 {
     line-height: 2.2;

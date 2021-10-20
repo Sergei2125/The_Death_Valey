@@ -2,9 +2,9 @@
   "name": "death-valey",
   "version": "1.0.0",
   "description": "gulp package",
-  "main": "index.html",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "author": "Sergey",
   "license": "ISC",

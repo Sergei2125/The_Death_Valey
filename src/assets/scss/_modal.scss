@@ -33,7 +33,7 @@
   }
 }
 
-@media (max-width: 530px) {
+@include screen-modal {
   .modal__content {
     padding: 0 5px;
     max-width: 100%;

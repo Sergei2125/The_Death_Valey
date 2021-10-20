@@ -16,19 +16,18 @@ footer {
   }
 
   &__info {
-    padding: 105px 0 122px;
-    display: flex;
-    justify-content: space-between;
+    padding: 10.5rem 0 12.2rem;
+    @include displFlexSpaceBetw;
     color: #c7cccf;
     align-items: stretch;
   }
 }
 
 .form {
-  padding: 0px 33px 35px 30px;
+  padding: 0 3.3rem 3.5rem 3rem;
   background-color: #021623b3;
   z-index: 2;
-  margin-right: 26px;
+  margin-right: 2.6rem;
   width: 613px;
 
   &__input,
@@ -39,7 +38,7 @@ footer {
     font-family: "Raleway";
     color: #ffffffb3;
     background-color: #02162300;
-    font-size: 15px;
+    font-size: $fontSize-m;
     outline: none;
     border: none;
     border-bottom: solid 1px #ffffff4d;
@@ -51,34 +50,34 @@ footer {
   &__subject::placeholder,
   &__email::placeholder,
   &__message::placeholder {
-    color: #ffffff9a;
+    color: $white2;
   }
   &__input {
-    margin: 27px 0 0px;
-    padding: 0 4px;
+    margin: 2.7rem 0 0;
+    padding: 0 0.4rem;
   }
   &__subject {
-    margin: 11px 0 0px;
-    padding: 0 4px;
+    margin: 1.1rem 0 0;
+    padding: 0 0.4rem;
   }
   &__email {
-    margin: 10px 0 0px;
-    padding: 0 4px;
+    margin: 1rem 0 0;
+    padding: 0 0.4rem;
   }
   &__message {
-    margin: 13px 0 0px;
-    padding: 0 4px 26px;
+    margin: 1.3rem 0 0;
+    padding: 0 0.4rem 2.6rem;
   }
   &__submit {
     display: inline-block;
-    padding: 14px 35px 13px 35px;
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.7);
+    padding: 1.4rem 3.5rem 1.3rem 3.5rem;
+    margin: 3.6rem 0 0.2rem;
+    font-size: 1.8rem;
+    color: #000000b3;
     outline: none;
     border: none;
-    background-color: #6eeee4;
+    background-color: $blue;
     border-radius: 4px;
-    margin: 36px 0 2px;
     line-height: 1.556;
     letter-spacing: 2.6px;
   }
@@ -98,26 +97,26 @@ footer {
 }
 
 .address {
-  padding: 29px 22px 11px;
+  padding: 2.9rem 2.2rem 1.1rem;
   background-color: #021623b3;
   box-shadow: 0px 0px 3px 0px #15151529;
   z-index: 2;
-  color: #ffffff9a;
+  color: $white2;
   width: 500px;
   font-family: "Raleway";
-  font-size: 15px;
+  font-size: $fontSize-m;
   line-height: 1.6;
 
   &__text {
-    padding-left: 7px;
+    padding-left: 0.7rem;
   }
   &__web {
-    padding-top: 24px;
-    padding-left: 7px;
+    padding-top: 2.4rem;
+    padding-left: 0.7rem;
   }
   &__email {
-    padding-left: 7px;
-    margin-bottom: 20px;
+    padding-left: 0.7rem;
+    margin-bottom: 2rem;
   }
 }
 .map {
@@ -128,9 +127,9 @@ footer {
 
   &__content {
     color: #eee;
-    font-size: 12px;
+    font-size: 1.2rem;
     position: absolute;
-    top: 0px;
+    top: 0;
   }
   &__iframe {
     width: 100%;
@@ -139,16 +138,17 @@ footer {
 }
 
 .social {
-  padding: 75px 3px 147px 0;
+  padding: 7.5rem 0.3rem 14.7rem 0;
   background-color: #252a2d;
   text-align: center;
   z-index: 2;
 
   &__text {
-    padding: 17px 16px 13px;
-    text-transform: uppercase;
+    padding: 1.7rem 1.6rem 1.3rem;
     font-family: "Raleway", sans-serif;
     color: #bec0c1;
+    @include uppercase;
+    font-size: 1.6rem;
   }
   &__content {
     display: flex;
@@ -165,7 +165,7 @@ footer {
     align-items: center;
   }
   &__link:hover {
-    background-color: #6eeee4;
+    background-color: $blue;
     transition: 0.3s;
   }
   &__link:hover .social__img {
@@ -183,9 +183,9 @@ footer {
   }
 }
 
-@media (max-width: 1023px) {
+@include screen-xl {
   .contacts__info {
-    padding: 50px 0;
+    padding: 5rem 0;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -193,14 +193,13 @@ footer {
     width: 613px;
   }
   .form {
-    margin: 0 0 50px;
+    margin: 0 0 5rem;
   }
 }
-@media (max-width: 767px) {
-}
-@media (max-width: 500px) {
+
+@include screen-s {
   .social {
-    padding: 50px 0;
+    padding: 5rem 0;
   }
   .address {
     width: 100%;
@@ -208,14 +207,14 @@ footer {
   .form {
     text-align: center;
     &__submit {
-      margin: 20px 0 0;
+      margin: 2rem 0 0;
     }
   }
 }
-@media (max-width: 425px) {
+@include screen-xs {
   .form {
     &__submit {
-      padding: 14px;
+      padding: 1.4rem;
     }
   }
 }

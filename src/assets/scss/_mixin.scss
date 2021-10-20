@@ -1,0 +1,67 @@
+@mixin uppercase {
+  text-transform: uppercase;
+}
+@mixin merriweatherBold {
+  font-family: "Merriweather";
+  font-weight: bold;
+}
+@mixin displFlexSpaceBetw {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin screen-big {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin screen-xxl {
+  @media (max-width: 1169px) {
+    @content;
+  }
+}
+@mixin screen-xl {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin screen-l {
+  @media (max-width: 899px) {
+    @content;
+  }
+}
+@mixin screen-m {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin screen-s {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+@mixin screen-modal {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+@mixin screen-xs {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+@mixin screen-small-x {
+  @media (max-width: 390px) {
+    @content;
+  }
+}
+@mixin screen-small {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+@mixin screen-small-s {
+  @media (max-width: 350px) {
+    @content;
+  }
+}

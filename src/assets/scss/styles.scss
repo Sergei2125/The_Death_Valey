@@ -4,13 +4,9 @@ html {
   font-size: 10px;
 }
 
-$fontSize-xxl: 4rem;
-$fontSize-xl: 3rem;
-$fontSize-l: 2rem;
-$fontSize-m: 1.5rem;
-
 @import "./_stylesheet";
 @import "./_reset";
+@import "./constants";
 @import "./_mixin";
 @import "./_colors";
 @import "./_header";
@@ -30,13 +26,13 @@ html {
   box-sizing: border-box;
 }
 .container {
-  width: 117rem;
+  width: 1170px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 @include screen-xxl {
   .container {
-    width: 102.4rem;
+    width: 1024px;
   }
 }
 @include screen-xl {
@@ -73,7 +69,7 @@ html {
     font-size: 1.7rem;
     letter-spacing: 1.2px;
   }
-  &__text--wide {
+  &__text_wide {
     letter-spacing: 1.9px;
   }
 }
@@ -195,7 +191,7 @@ html {
 
   &__content {
     padding-top: 12rem;
-    @include displFlexSpaceBetw;
+    @include flexSpaceBetween;
     flex-wrap: wrap;
   }
   &__img {
@@ -266,7 +262,7 @@ html {
   &__content {
     padding-top: 12.2rem;
     padding-right: 0.1rem;
-    @include displFlexSpaceBetw;
+    @include flexSpaceBetween;
     flex-wrap: wrap;
   }
   &__inner {

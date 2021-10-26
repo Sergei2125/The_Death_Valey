@@ -4,7 +4,7 @@ header {
 .header {
   height: 100vh;
   padding: 6.4rem 0 19.5rem;
-  @include displFlexSpaceBetw;
+  @include flexSpaceBetween;
   flex-direction: column;
   text-align: center;
 
@@ -27,7 +27,7 @@ header {
     letter-spacing: 2px;
     padding-left: 0.4rem;
   }
-  &__title--backBlue {
+  &__title_blue-background {
     background-color: $bluelight;
     padding: 0 0.8rem;
     text-shadow: 5px 5px 3px $bluedark;

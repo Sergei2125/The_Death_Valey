@@ -17,7 +17,7 @@ footer {
 
   &__info {
     padding: 10.5rem 0 12.2rem;
-    @include displFlexSpaceBetw;
+    @include flexSpaceBetween;
     color: #c7cccf;
     align-items: stretch;
   }
